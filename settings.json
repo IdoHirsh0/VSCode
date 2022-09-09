@@ -1,7 +1,7 @@
 {
     /********** General **********/
     "files.associations": {
-        "*.do": "go",
+        "*.do": "coffeescript"
     },
 
     // remove warning on untrusted authors
@@ -10,7 +10,6 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.startupEditor": "none",
-    "bracket-pair-colorizer-2.depreciation-notice": false,
     /*****************************/
 
     /********** Explorer **********/
@@ -22,7 +21,7 @@
     /********** Looks **********/
     // Font
     "editor.fontFamily": "Ubuntu Mono", // Cascadia Code | Cascadia Mono | Consolas | Consolas ligaturized v2 | Courier Prime | Fira Code | Hack Nerd Font Mono | Hasklig | Jetbrains Mono | Jetbrains Mono NL | Monaco for Powerline | Ubuntu Mono
-    "editor.fontSize": 24,
+    "editor.fontSize": 20,
     "editor.fontLigatures": true,
     "editor.tokenColorCustomizations": {
         "textMateRules": [
@@ -256,69 +255,6 @@
     },
     /*************************/
 
-    /********** Emoji sense **********/
-    "emojisense.languages": {
-        "plaintext": {
-            "markupCompletionsEnabled": true,
-            "emojiDecoratorsEnabled": true
-        },
-        "javascript.validate.enable": false,
-        "abap": true,
-        "bat": true,
-        "bibtex": true,
-        "clojure": true,
-        "coffeescript": true,
-        "c": true,
-        "cpp": true,
-        "csharp": true,
-        "css": true,
-        "diff": true,
-        "dockerfile": true,
-        "fsharp": true,
-        "git-commit": true,
-        "git-rebase": true,
-        "go": true,
-        "groovy": true,
-        "handlebars": true,
-        "html": true,
-        "ini": true,
-        "java": true,
-        "javascript": true,
-        "javascriptreact": true,
-        "json": true,
-        "jsonc": true,
-        "latex": true,
-        "less": true,
-        "lua": true,
-        "makefile": true,
-        "markdown": true,
-        "objective-c": true,
-        "objective-cpp": true,
-        "perl6": true,
-        "php": true,
-        "powershell": true,
-        "jade": true,
-        "python": true,
-        "r": true,
-        "razor": true,
-        "ruby": true,
-        "rust": true,
-        "scss": true,
-        "sass": true,
-        "shaderlab": true,
-        "shellscript": true,
-        "sql": true,
-        "swift": true,
-        "typescript": true,
-        "typescriptreact": true,
-        "tex": true,
-        "vb": true,
-        "xml": true,
-        "xsl": true,
-        "yaml": true
-    },
-    /*********************************/
-
     /********** TabNine **********/
     "tabnine.experimentalAutoImports": true,
     /*****************************/
@@ -326,5 +262,8 @@
     /********** Live Share **********/
     "liveshare.audio.startCallOnShare": true,
     "window.zoomLevel": 1,
+    "files.exclude": {
+        "**/__pycache__": true
+    },
     /********************************/
 }
