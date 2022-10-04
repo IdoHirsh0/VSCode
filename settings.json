@@ -1,15 +1,23 @@
 {
     /********** General **********/
-    "files.associations": {
-        "*.do": "coffeescript"
-    },
-
-    // remove warning on untrusted authors
-    "security.workspace.trust.untrustedfiles": "open", 
+    "window.zoomLevel": 1,
 
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.startupEditor": "none",
+
+    // remove warning on untrusted authors
+    "security.workspace.trust.untrustedfiles": "open", 
+
+    // File associations
+    "files.associations": {
+        "*.do": "coffeescript"
+    },
+    
+    // File exclude
+    "files.exclude": {
+        "**/__pycache__": true
+    },
     /*****************************/
 
     /********** Explorer **********/
@@ -26,16 +34,16 @@
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
-                // Will be italic
+                // Global scope
                 "scope": [
-                    ""  // Scope is all the code
+                    ""
                 ],
                 "settings": {
                     "fontStyle": ""
                 },
             },
             {
-                // Will not be italic
+                // Specific scopes
                 "scope": [
                     "keyword.operator",
                     "constant.numeric",
@@ -107,6 +115,12 @@
     "autoDocstring.docstringFormat": "sphinx",
     "autoDocstring.startOnNewLine": true,
     /****************************/
+
+    /********** JS **********/
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "js/ts.implicitProjectConfig.experimentalDecorators": true,
+    "javascript.format.semicolons": "insert",
+    /************************/
 
     /********** Vim **********/
     "vim.easymotion": true,
@@ -261,9 +275,5 @@
 
     /********** Live Share **********/
     "liveshare.audio.startCallOnShare": true,
-    "window.zoomLevel": 1,
-    "files.exclude": {
-        "**/__pycache__": true
-    },
     /********************************/
 }
