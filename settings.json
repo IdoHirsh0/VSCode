@@ -1,6 +1,6 @@
 {
     /********** General **********/
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
 
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -29,7 +29,7 @@
     /********** Looks **********/
     // Font
     "editor.fontFamily": "Ubuntu Mono", // Cascadia Code | Cascadia Mono | Consolas | Consolas ligaturized v2 | Courier Prime | Fira Code | Hack Nerd Font Mono | Hasklig | Jetbrains Mono | Jetbrains Mono NL | Monaco for Powerline | Ubuntu Mono
-    "editor.fontSize": 20,
+    "editor.fontSize": 22,
     "editor.fontLigatures": true,
     "editor.tokenColorCustomizations": {
         "textMateRules": [
@@ -70,7 +70,7 @@
     "json.format.enable": false,  // Disable json formatting
 
     // Terminal
-    "terminal.integrated.fontSize": 20,
+    "terminal.integrated.fontSize": 22,
     /*********************************/
 
     /********** C **********/
