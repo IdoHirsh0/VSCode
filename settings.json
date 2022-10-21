@@ -1,12 +1,13 @@
 {
     /********** General **********/
-    "window.zoomLevel": 0,
-
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.startupEditor": "none",
 
-    // remove warning on untrusted authors
+    // Window zoom level
+    "window.zoomLevel": 0,
+
+    // Remove warning on untrusted authors
     "security.workspace.trust.untrustedfiles": "open", 
 
     // File associations
