@@ -4,9 +4,6 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.startupEditor": "none",
 
-    // Window zoom level
-    "window.zoomLevel": 0,
-
     // Remove warning on untrusted authors
     "security.workspace.trust.untrustedfiles": "open", 
 
