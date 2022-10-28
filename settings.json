@@ -242,6 +242,11 @@
         {
             "before": ["<leader>", "l"],
             "after": ["$"]
+        },
+        // Paste without loosing register
+        {
+            "before": ["<leader>", "p"],
+            "after": ["\"", "_", "d", "P"]
         }
     ],
     "vim.commandLineModeKeyBindings": [
@@ -273,5 +278,5 @@
 
     /********** Live Share **********/
     "liveshare.audio.startCallOnShare": true,
-    /********************************/
+    /***************************/
 }
