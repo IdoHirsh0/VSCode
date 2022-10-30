@@ -24,7 +24,7 @@
     },
     // Toggle sidebar
     {
-        "key": "ctrl+[",
+        "key": "ctrl+shift+e",
         "command": "workbench.action.toggleSidebarVisibility" 
     },
     // ctrl + shift + k to hover
