@@ -1,13 +1,16 @@
 [
-    // Switch tabs without vim
+    // Close currnt tab
     {
-        "key": "ctrl+tab",
-        "command": "workbench.action.nextEditor"
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor"
     },
+
+    // Highlight matches (replace ctrl+d)
     {
-        "key": "ctrl+shift+tab",
-        "command": "workbench.action.previousEditor"
+        "key": "ctrl+h",
+        "command": "editor.action.addSelectionToNextFindMatch"
     },
+
     // Move lines up & down
     {
         "key": "alt+k",
@@ -16,26 +19,5 @@
     {
         "key": "alt+j",
         "command": "editor.action.moveLinesDownAction",
-    },
-    // Switch terminals
-    { 
-        "key": "ctrl+'", 
-        "command": "workbench.action.terminal.focusNext" 
-    },
-    // Toggle sidebar
-    {
-        "key": "ctrl+shift+e",
-        "command": "workbench.action.toggleSidebarVisibility" 
-    },
-    // ctrl + shift + k to hover
-    {
-      "key": "ctrl+shift+k",
-      "command": "editor.action.showHover",
-      "when": "editorTextFocus"
-    },
-    // Toggle vim
-    {
-      "key": "ctrl+alt+v",
-      "command": "toggleVim"
-    },
+    }
 ]

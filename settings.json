@@ -7,14 +7,17 @@
     // Remove warning on untrusted authors
     "security.workspace.trust.untrustedfiles": "open", 
 
-    // File associations
-    "files.associations": {
-        "*.do": "coffeescript"
-    },
+    // Autosave
+    "files.autoSave": "onFocusChange",
     
     // File exclude
     "files.exclude": {
         "**/__pycache__": true
+    },
+
+    // File associations
+    "files.associations": {
+        "*.do": "coffeescript"
     },
     /*****************************/
 
@@ -29,37 +32,9 @@
     "editor.fontFamily": "Ubuntu Mono", // Cascadia Code | Cascadia Mono | Consolas | Consolas ligaturized v2 | Courier Prime | Fira Code | Hack Nerd Font Mono | Hasklig | Jetbrains Mono | Jetbrains Mono NL | Monaco for Powerline | Ubuntu Mono
     "editor.fontSize": 22,
     "editor.fontLigatures": true,
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                // Global scope
-                "scope": [
-                    ""
-                ],
-                "settings": {
-                    "fontStyle": ""
-                },
-            },
-            {
-                // Specific scopes
-                "scope": [
-                    "keyword.operator",
-                    "constant.numeric",
-                ],
-                "settings": {
-                    "fontStyle": "",
-                }
-            },
-        ]
-    },
 
     // Theme
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorCustomizations": {
-        "[Material Theme Darker]": {
-            "statusBar.debuggingBackground": "#212121"
-        }
-    },
 
     // Format
     "editor.formatOnSave": true,
@@ -75,18 +50,22 @@
     // Run C code in terminal
     "code-runner.runInTerminal": true, 
 
+    // Compiler path
     "C_Cpp.default.compilerPath": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-win32-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
 
     // Formatting
     "C_Cpp.formatting": "vcFormat",
+
     // Indent
     "C_Cpp.vcFormat.indent.caseLabels": true,
     "C_Cpp.vcFormat.indent.caseContents": true,
+
     // Space
     "C_Cpp.vcFormat.space.preserveInInitializerList": false,
     "C_Cpp.vcFormat.space.insertAfterSemicolon": true,
     "C_Cpp.vcFormat.space.beforeInitializerListOpenBrace": true,
     "C_Cpp.vcFormat.space.afterCastCloseParenthesis": true,
+
     // NewLine
     "C_Cpp.vcFormat.newLine.scopeBracesOnSeparateLines": true,
     "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": true,
@@ -109,7 +88,9 @@
     /**************************/
 
     /********** Python **********/
-    "python.formatting.provider": "black",
+    "python.formatting.provider": "autopep8",
+
+    // Docstring
     "autoDocstring.docstringFormat": "sphinx",
     "autoDocstring.startOnNewLine": true,
     /****************************/
@@ -121,140 +102,70 @@
     /************************/
 
     /********** Vim **********/
-    "vim.easymotion": true,
-    "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
     "vim.smartRelativeLine": true,
-
-    "files.autoSave": "onFocusChange",
-
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.easymotion": true,
+    
     "vim.handleKeys": {
       "<C-a>": false,
-      "<C-x>": false,
+      "<C-b>": false,
       "<C-c>": false,
-      "<C-v>": false,
-      "<C-z>": false,
-      "<C-y>": false,
       "<C-f>": false,
-      "<C-d>": false,
       "<C-j>": false,
-      "<C-k>": false
+      "<C-k>": false,
+      "<C-v>": false,
+      "<C-x>": false,
+      "<C-y>": false,
+      "<C-z>": false
     },
 
     "vim.leader": "<space>",
+
     "vim.normalModeKeyBindings": [
-        // Save & Quit
-        {
-            "before": ["<leader>", "w"],
-            "after": [":", "w", "<Cr>"]
-        },
-        {
-            "before": ["<leader>", "q"],
-            "after": [":", "q", "<Cr>"]
-        },
-        // Buffer switches
-        {
-            "before": ["<tab>"],
-            "commands": ["workbench.action.nextEditor"]
-        },
-        {
-            "before": ["<S-tab>"],
-            "commands": ["workbench.action.previousEditor"]
-        },
-        // Reveal in explorer
-        {
-            "before": ["<leader>", "f"],
-            "commands": ["revealInExplorer"]
-        },
-        // Go to start of line
-        {
-            "before": ["<leader>", "h"],
-            "after": ["_"]
-        },
-        // Go to end of line
-        {
-            "before": ["<leader>", "l"],
-            "after": ["$"]
-        },
-        // Go to end of line and put ;
-        {
-            "before": ["<leader>", ";"],
-            "after": ["$", "a", ";", "<Esc>", "a"]
-        },
-        // Create splits
-        {
-            "before": ["<leader>", "s", "j"],
-            "after": ["<C-w>", "s"]
-        },
-        {
-            "before": ["<leader>", "s", "l"],
-            "after": ["<C-w>", "v"]
-        },
-        // Split navigation
-        {
-            "before": ["<C-h>"],
-            "after": ["<C-w>", "h"]
-        },
-        {
-            "before": ["<C-l>"],
-            "after": ["<C-w>", "l"]
-        },
-        {
-            "before": ["<C-j>"],
-            "after": ["<C-w>", "j"]
-        },
-        {
-            "before": ["<C-k>"],
-            "after": ["<C-w>", "k"]
-        },
-        // Make Y like D, C etc.
-        {
-            "before": ["Y"],
-            "after": ["y", "$"]
-        },
         // No highlight
         {
             "before": ["<leader>", "n", "h"],
             "commands": [":nohl"]
+        },
+
+        // Make Y like D & C, Yank till the end of the line
+        {
+            "before": ["Y"],
+            "after": ["y", "$"]
+        },
+
+        // Centered ctrl+d & ctrl+u
+        {
+            "before": ["<C-d>"],
+            "after": ["<C-d>", "z", "z"]
+        },
+        {
+            "before": ["<C-u>"],
+            "after": ["<C-u>", "z", "z"]
+        },
+
+        // Delete without copying
+        {
+            "before": ["<leader>", "d"],
+            "after": ["\"", "_", "d"]
         }
     ],
-    "vim.insertModeKeyBindings": [
-        // Back to normal mode
-        {
-            "before": [";", "j"],
-            "after": ["<Esc>", "<Esc>", "<Esc>"]
-        }        
-    ],
+
     "vim.visualModeKeyBindings": [
-        // Back to normal mode
-        {
-            "before": [";", "j"],
-            "after": ["<Esc>", "<Esc>", "<Esc>"]
-        },
-        // Go to start of line
-        {
-            "before": ["<leader>", "h"],
-            "after": ["_"]
-        },
-        // Go to end of line
-        {
-            "before": ["<leader>", "l"],
-            "after": ["$"]
-        },
         // Paste without loosing register
         {
             "before": ["<leader>", "p"],
             "after": ["\"", "_", "d", "P"]
-        }
-    ],
-    "vim.commandLineModeKeyBindings": [
-        // Back to normal mode
+        },
+
+        // Delete without copieing
         {
-            "before": [";", "j"],
-            "after": ["<Esc>", "<Esc>", "<Esc>"]
-        }         
+            "before": ["<leader>", "d"],
+            "after": ["\"", "_", "d"]
+        }
     ],
     /*************************/
 
@@ -277,6 +188,6 @@
     /*****************************/
 
     /********** Live Share **********/
-    "liveshare.audio.startCallOnShare": true,
+    "liveshare.audio.startCallOnShare": true
     /***************************/
 }
