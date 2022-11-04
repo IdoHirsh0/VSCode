@@ -14,10 +14,10 @@
     // Move lines up & down
     {
         "key": "alt+k",
-        "command": "editor.action.moveLinesUpAction",
+        "command": "editor.action.moveLinesUpAction"
     },
     {
         "key": "alt+j",
-        "command": "editor.action.moveLinesDownAction",
+        "command": "editor.action.moveLinesDownAction"
     }
 ]
