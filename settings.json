@@ -117,6 +117,7 @@
       "<C-j>": false,
       "<C-k>": false,
       "<C-v>": false,
+      "<C-w>": false,
       "<C-x>": false,
       "<C-y>": false,
       "<C-z>": false
@@ -188,6 +189,7 @@
     /*****************************/
 
     /********** Live Share **********/
-    "liveshare.audio.startCallOnShare": true
+    "liveshare.audio.startCallOnShare": true,
+    "window.zoomLevel": 1
     /***************************/
 }

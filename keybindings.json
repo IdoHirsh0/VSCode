@@ -1,10 +1,4 @@
 [
-    // Close currnt tab
-    {
-        "key": "ctrl+w",
-        "command": "workbench.action.closeActiveEditor"
-    },
-
     // Highlight matches (replace ctrl+d)
     {
         "key": "ctrl+h",
