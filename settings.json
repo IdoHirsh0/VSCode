@@ -126,6 +126,16 @@
     "vim.leader": "<space>",
 
     "vim.normalModeKeyBindings": [
+        // Indent using Tab & Shift + Tab
+        {
+            "before": ["<Tab>"],
+            "after": [">", ">", "_"]
+        },
+        {
+            "before": ["<S-Tab>"],
+            "after": ["<", "<", "_"]
+        },
+
         // No highlight
         {
             "before": ["<leader>", "n", "h"],
@@ -156,6 +166,16 @@
     ],
 
     "vim.visualModeKeyBindings": [
+        // Indent using Tab & Shift + Tab
+        {
+            "before": ["<Tab>"],
+            "after": [">", "g", "v"]
+        },
+        {
+            "before": ["<S-Tab>"],
+            "after": ["<", "g", "v"]
+        },
+
         // Paste without loosing register
         {
             "before": ["<leader>", "p"],
