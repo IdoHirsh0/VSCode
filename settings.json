@@ -80,13 +80,6 @@
     "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "newLine",
     /***********************/
 
-    /********** Java **********/
-    "java.codeGeneration.generateComments": true,
-    "[java]": {
-        "editor.defaultFormatter": "redhat.java"
-    },
-    /**************************/
-
     /********** Python **********/
     "python.formatting.provider": "autopep8",
 
@@ -209,7 +202,6 @@
     /*****************************/
 
     /********** Live Share **********/
-    "liveshare.audio.startCallOnShare": true,
-    "window.zoomLevel": 1
+    "liveshare.audio.startCallOnShare": true
     /***************************/
 }
